@@ -24,3 +24,24 @@ input,select,textarea{font:inherit;color:var(--tx);background:var(--card);border
 .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px}
 .kpi b{display:block;font-size:26px;margin-top:2px}.kpi span{color:var(--mu);font-size:12px}
 .tw{overflow-x:auto;background:var(--card);border:1px solid var(--bd);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--mu);padding:10px;border-bottom:1px solid var(--bd);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--bd);white-space:nowrap}tr:last-child td{border:0}
+.pill{padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600;background:var(--pr2);color:var(--pr)}
+.Positive,.ok{background:#12a36b22;color:var(--ok)}.Negative,.Overdue,.Pending{background:#d83b4b22;color:var(--er)}.Due,.Busy,.Neutral{background:#e99a0022;color:var(--wa)}
+.bar{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:12px}.bar i{display:block;height:8px;border-radius:4px;background:var(--pr)}.bar em{width:130px;font-style:normal;color:var(--mu)}
+dialog{border:0;border-radius:14px;padding:18px;width:min(460px,94vw);background:var(--card);color:var(--tx)}
+.chips{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.chip{margin:0;font-size:14px;color:var(--tx)}.chip input{display:none}.chip span{display:block;text-align:center;padding:9px 0;border:1px solid var(--bd);border-radius:8px;cursor:pointer}.chip input:checked+span{background:var(--pr);color:#fff;border-color:var(--pr)}
+dialog{max-height:90vh;overflow:auto}dialog::backdrop{background:#0009}
+label{display:block;font-size:12px;color:var(--mu);margin:9px 0 3px}dialog input,dialog select,dialog textarea{width:100%}
+.empty{text-align:center;color:var(--mu);padding:30px}
+.trend{display:flex;gap:4px;align-items:flex-end;height:120px}.trend>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:10px;color:var(--mu)}.trend i{display:block;width:100%;background:var(--pr);border-radius:4px 4px 0 0;min-height:2px}
+h2{font-size:15px;margin:0 0 8px}
+</style></head><body>
+<header><h1>✝ Zion Sathvartha</h1><p>Outreach Ministry System · Fresh Contact → Follow Up → Content Share → Sathvartha</p></header>
+<nav id="nav"></nav><main id="app"></main>
+<dialog id="dlg"><form method="dialog" onsubmit="return false"><h2 id="dt"></h2><div id="df"></div>
+<div class="row" style="margin:16px 0 0;justify-content:flex-end"><button class="btn g" onclick="dlg.close()">Cancel</button><button class="btn" onclick="save()">Save</button></div></form></dialog>
+<datalist id="ids"></datalist>
+<input type="file" id="imp" accept=".csv,.txt,text/csv,text/plain" hidden onchange="onImp(this)">
+<script src="app.js?v=1"></script></body></html>
